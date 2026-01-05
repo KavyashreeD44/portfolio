@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kavyashree | Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      line-height: 1.6;
+      background: #f4f6f8;
+      color: #333;
+    }
+
+    header {
+      background: #0a66c2;
+      color: #fff;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 1.1rem;
+    }
+
+    nav {
+      background: #fff;
+      padding: 10px 0;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #0a66c2;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    section h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      color: #0a66c2;
+    }
+
+    .about p {
+      text-align: center;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    .skill-card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .project-card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .project-card h3 {
+      margin-bottom: 10px;
+      color: #0a66c2;
+    }
+
+    .contact {
+      text-align: center;
+    }
+
+    .contact button {
+      margin-top: 20px;
+      padding: 12px 25px;
+      border: none;
+      background: #0a66c2;
+      color: #fff;
+      font-size: 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    footer {
+      background: #222;
+      color: #fff;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Kavyashree D</h1>
+    <p>Android App Developer | Kotlin | Jetpack Compose</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <p>
+      I am a Computer Science student and Android App Development intern.
+      I enjoy building clean, user-friendly mobile applications using Kotlin
+      and Jetpack Compose. I am passionate about learning new technologies
+      and improving my problem-solving skills.
+    </p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="skill-card">Kotlin</div>
+      <div class="skill-card">Android Development</div>
+      <div class="skill-card">Jetpack Compose</div>
+      <div class="skill-card">HTML & CSS</div>
+      <div class="skill-card">JavaScript</div>
+      <div class="skill-card">Git & GitHub</div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="project-card">
+        <h3>Expense Manager App</h3>
+        <p>
+          An Android app to track daily expenses with a clean UI
+          and category-wise summary.
+        </p>
+      </div>
+      <div class="project-card">
+        <h3>Dice Roller App</h3>
+        <p>
+          A simple Kotlin app that simulates rolling dice
+          with random number generation.
+        </p>
+      </div>
+      <div class="project-card">
+        <h3>Art Gallery App</h3>
+        <p>
+          Displays famous artworks with next and previous navigation
+          using Jetpack Compose.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <p>Email: kavyashree@example.com</p>
+    <button onclick="showMessage()">Say Hello</button>
+  </section>
+
+  <footer>
+    <p>© 2026 Kavyashree D. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function showMessage() {
+      alert("Thank you for visiting my portfolio! 😊");
+    }
+  </script>
+
+</body>
+</html>
