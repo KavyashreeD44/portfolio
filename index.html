@@ -3,216 +3,821 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kavyashree | Portfolio</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, Helvetica, sans-serif;
-    }
+  
+  <!-- SEO & Professional Metadata -->
+  <title>Kavyashree D | Software Developer</title>
+  <meta name="description" content="Computer Science undergraduate with hands-on experience in backend development using FastAPI, Django, Flask, REST APIs, SQL, and Docker, along with frontend exposure to React.js. Developed authentication systems and data-driven applications with a strong foundation in Data Structures & Algorithms, DBMS, and Operating Systems. Seeking software engineering opportunities to build scalable web and AI-enabled applications." />
+  <meta name="keywords" content="Kavyashree D, Software Developer, Backend Developer, Python, FastAPI, Django, Flask, SQL, Docker, React.js, Machine Learning, Generative AI, Portfolio" />
+  <meta name="author" content="Kavyashree D" />
+  <meta name="theme-color" content="#0B1120" />
 
-    body {
-      line-height: 1.6;
-      background: #f4f6f8;
-      color: #333;
-    }
+  <!-- Open Graph Metadata -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Kavyashree D | Software Developer" />
+  <meta property="og:description" content="Computer Science undergraduate specializing in backend architecture, Python, REST APIs, SQL, AI/ML, and scalable web solutions." />
+  <meta property="og:image" content="assets/profile.jpg" />
 
-    header {
-      background: #0a66c2;
-      color: #fff;
-      padding: 40px 20px;
-      text-align: center;
-    }
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
 
-    header h1 {
-      font-size: 2.5rem;
-    }
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    header p {
-      margin-top: 10px;
-      font-size: 1.1rem;
-    }
-
-    nav {
-      background: #fff;
-      padding: 10px 0;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-
-    nav ul {
-      display: flex;
-      justify-content: center;
-      list-style: none;
-    }
-
-    nav ul li {
-      margin: 0 15px;
-    }
-
-    nav ul li a {
-      text-decoration: none;
-      color: #0a66c2;
-      font-weight: bold;
-    }
-
-    section {
-      padding: 60px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    section h2 {
-      text-align: center;
-      margin-bottom: 40px;
-      color: #0a66c2;
-    }
-
-    .about p {
-      text-align: center;
-      max-width: 700px;
-      margin: auto;
-    }
-
-    .skills {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
-    }
-
-    .skill-card {
-      background: #fff;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      text-align: center;
-    }
-
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-    }
-
-    .project-card {
-      background: #fff;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-
-    .project-card h3 {
-      margin-bottom: 10px;
-      color: #0a66c2;
-    }
-
-    .contact {
-      text-align: center;
-    }
-
-    .contact button {
-      margin-top: 20px;
-      padding: 12px 25px;
-      border: none;
-      background: #0a66c2;
-      color: #fff;
-      font-size: 1rem;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-
-    footer {
-      background: #222;
-      color: #fff;
-      text-align: center;
-      padding: 15px 0;
-      margin-top: 40px;
-    }
-  </style>
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
 </head>
 <body>
 
-  <header>
-    <h1>Kavyashree D</h1>
-    <p>Android App Developer | Kotlin | Jetpack Compose</p>
+  <!-- ==========================================================================
+       Navigation Bar
+       ========================================================================== -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#home" class="logo" aria-label="Kavyashree D Portfolio Home">
+        <span class="logo-text">KAVYASHREE D</span>
+        <span class="logo-badge">.dev</span>
+      </a>
+
+      <!-- Desktop & Mobile Navigation Links -->
+      <nav>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#education" class="nav-link">Education</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#certifications" class="nav-link">Certifications</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Mobile Hamburger Toggle -->
+      <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
   </header>
 
-  <nav>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+  <!-- ==========================================================================
+       Hero Section
+       ========================================================================== -->
+  <section class="hero-section" id="home">
+    <div class="container hero-grid">
+      <div class="hero-text-content">
+        <span class="hero-greeting"><i class="fas fa-terminal"></i> Hello, I'm</span>
+        <h1 class="hero-title">KAVYASHREE D</h1>
+        <div class="hero-role">Software Developer</div>
+        <p class="hero-summary">
+          Computer Science undergraduate with hands-on experience in backend development using FastAPI, Django, Flask, REST APIs, SQL, and Docker, along with frontend exposure to React.js. Developed authentication systems and data-driven applications with a strong foundation in Data Structures & Algorithms, DBMS, and Operating Systems. Seeking software engineering opportunities to build scalable web and AI-enabled applications.
+        </p>
 
-  <section id="about" class="about">
-    <h2>About Me</h2>
-    <p>
-      I am a Computer Science student and Android App Development intern.
-      I enjoy building clean, user-friendly mobile applications using Kotlin
-      and Jetpack Compose. I am passionate about learning new technologies
-      and improving my problem-solving skills.
-    </p>
-  </section>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary" id="hero-view-projects">
+            <span>View Projects</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+          <a href="assets/Kavyashree-D-Resume.pdf" class="btn btn-outline" id="hero-download-resume" download="Kavyashree-D-Resume.pdf" target="_blank" rel="noopener noreferrer">
+            <i class="fas fa-download"></i>
+            <span>Download Resume</span>
+          </a>
+        </div>
 
-  <section id="skills">
-    <h2>Skills</h2>
-    <div class="skills">
-      <div class="skill-card">Kotlin</div>
-      <div class="skill-card">Android Development</div>
-      <div class="skill-card">Jetpack Compose</div>
-      <div class="skill-card">HTML & CSS</div>
-      <div class="skill-card">JavaScript</div>
-      <div class="skill-card">Git & GitHub</div>
+        <!-- Social Links -->
+        <div class="social-links">
+          <a href="https://github.com/KavyashreeD44" class="social-icon-btn" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile" title="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/kavyashree-d-924906420/" class="social-icon-btn" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" title="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="mailto:kavyashreed44@gmail.com" class="social-icon-btn" aria-label="Send Email" title="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Hero Profile Visual -->
+      <div class="hero-image-wrapper">
+        <div class="floating-badge badge-backend">
+          <i class="fas fa-server"></i>
+          <span>Backend & APIs</span>
+        </div>
+
+        <div class="hero-profile-card">
+          <div class="hero-profile-inner">
+            <img src="assets/profile.jpg" alt="Kavyashree D - Software Developer" class="hero-profile-img" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'340\' height=\'420\' viewBox=\'0 0 340 420\'><rect fill=\'%23111827\' width=\'340\' height=\'420\'/><text fill=\'%2338BDF8\' font-family=\'sans-serif\' font-size=\'22\' font-weight=\'bold\' x=\'50%25\' y=\'50%25\' text-anchor=\'middle\'>KAVYASHREE D</text></svg>';" />
+          </div>
+        </div>
+
+        <div class="floating-badge badge-ai">
+          <i class="fas fa-brain"></i>
+          <span>AI / ML & Cloud</span>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="projects">
-      <div class="project-card">
-        <h3>Expense Manager App</h3>
-        <p>
-          An Android app to track daily expenses with a clean UI
-          and category-wise summary.
-        </p>
+  <!-- ==========================================================================
+       About Me Section
+       ========================================================================== -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">About Me</h2>
+        <p class="section-subtitle">Dedicated to engineering robust backend architectures, clean APIs, and intelligent data systems.</p>
       </div>
-      <div class="project-card">
-        <h3>Dice Roller App</h3>
-        <p>
-          A simple Kotlin app that simulates rolling dice
-          with random number generation.
-        </p>
-      </div>
-      <div class="project-card">
-        <h3>Art Gallery App</h3>
-        <p>
-          Displays famous artworks with next and previous navigation
-          using Jetpack Compose.
-        </p>
+
+      <div class="about-grid">
+        <div class="about-img-box">
+          <div class="about-img-frame">
+            <img src="assets/profile.jpg" alt="Kavyashree D Portrait" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'380\' height=\'475\' viewBox=\'0 0 380 475\'><rect fill=\'%23111827\' width=\'380\' height=\'475\'/><text fill=\'%2338BDF8\' font-family=\'sans-serif\' font-size=\'20\' font-weight=\'bold\' x=\'50%25\' y=\'50%25\' text-anchor=\'middle\'>Kavyashree D</text></svg>';" />
+          </div>
+          <div class="about-experience-pill">
+            <span class="pill-number">4+</span>
+            <span class="pill-text">Months Industry<br />Internship Experience</span>
+          </div>
+        </div>
+
+        <div class="about-content">
+          <h3 class="about-lead">Software Developer & Computer Science Undergraduate</h3>
+          <p class="about-text">
+            I am a Computer Science undergraduate focused on software engineering and backend systems. My core technical expertise centers around building high-performance server architectures, microservices, and REST APIs using <strong>Python</strong>, <strong>FastAPI</strong>, <strong>Django</strong>, <strong>Flask</strong>, <strong>SQL</strong>, and <strong>Docker</strong>, complemented by frontend development with <strong>React.js</strong>.
+          </p>
+          <p class="about-text">
+            With a deep enthusiasm for applied intelligence, I work on <strong>Machine Learning</strong> and <strong>Generative AI</strong> integrations using platforms such as Google AI Studio. My software development methodology is grounded in rigorous fundamentals across <strong>Data Structures & Algorithms</strong>, <strong>Database Management Systems (DBMS)</strong>, and <strong>Operating Systems</strong>, ensuring applications are scalable, secure, and architecturally resilient.
+          </p>
+
+          <div class="about-highlights">
+            <div class="highlight-item">
+              <i class="fas fa-graduation-cap"></i>
+              <div>
+                <h4>Education</h4>
+                <p>B.E. in Computer Science & Engineering (2022 - 2026)</p>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <i class="fas fa-layer-group"></i>
+              <div>
+                <h4>Core Focus</h4>
+                <p>Backend Systems, Cloud, REST APIs & AI/ML</p>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <i class="fas fa-cubes"></i>
+              <div>
+                <h4>Fundamentals</h4>
+                <p>DSA, OOP, DBMS & Operating Systems</p>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <h4>Location</h4>
+                <p>Hassan, Karnataka, India</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <section id="contact" class="contact">
-    <h2>Contact Me</h2>
-    <p>Email: kavyashree@example.com</p>
-    <button onclick="showMessage()">Say Hello</button>
+  <!-- ==========================================================================
+       Education Section
+       ========================================================================== -->
+  <section class="section" id="education" style="background: rgba(17, 24, 39, 0.4);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fas fa-graduation-cap"></i> Academic Pathway</span>
+        <h2 class="section-title">Education Journey</h2>
+        <p class="section-subtitle">A chronological record of academic excellence in Computer Science and secondary education.</p>
+      </div>
+
+      <div class="education-timeline">
+        <!-- Education 1 -->
+        <div class="timeline-card">
+          <div class="timeline-node"><div class="timeline-node-inner"></div></div>
+          <div class="timeline-header">
+            <div>
+              <h3 class="timeline-institute">Rajeev Institute of Technology</h3>
+              <div class="timeline-degree">Bachelor of Engineering in Computer Science and Engineering</div>
+            </div>
+            <span class="timeline-badge"><i class="far fa-calendar-alt"></i> 2022 - 2026</span>
+          </div>
+          <div class="timeline-meta">
+            <span class="meta-item"><i class="fas fa-map-marker-alt"></i> Hassan, India</span>
+            <span class="score-badge"><i class="fas fa-award"></i> CGPA: 8</span>
+          </div>
+        </div>
+
+        <!-- Education 2 -->
+        <div class="timeline-card">
+          <div class="timeline-node"><div class="timeline-node-inner"></div></div>
+          <div class="timeline-header">
+            <div>
+              <h3 class="timeline-institute">Government PU College</h3>
+              <div class="timeline-degree">Pre-University Education — Karnataka State Board</div>
+            </div>
+            <span class="timeline-badge"><i class="far fa-calendar-alt"></i> 2022</span>
+          </div>
+          <div class="timeline-meta">
+            <span class="meta-item"><i class="fas fa-map-marker-alt"></i> Hassan, India</span>
+            <span class="score-badge"><i class="fas fa-award"></i> Class 12th Score: 79.16%</span>
+          </div>
+        </div>
+
+        <!-- Education 3 -->
+        <div class="timeline-card">
+          <div class="timeline-node"><div class="timeline-node-inner"></div></div>
+          <div class="timeline-header">
+            <div>
+              <h3 class="timeline-institute">S.G.R Public School</h3>
+              <div class="timeline-degree">Secondary School Leaving Certificate (10th Standard)</div>
+            </div>
+            <span class="timeline-badge"><i class="far fa-calendar-alt"></i> 2020</span>
+          </div>
+          <div class="timeline-meta">
+            <span class="meta-item"><i class="fas fa-map-marker-alt"></i> Hassan, India</span>
+            <span class="score-badge"><i class="fas fa-award"></i> Class 10th Score: 82.08%</span>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <footer>
-    <p>© 2026 Kavyashree D. All rights reserved.</p>
+  <!-- ==========================================================================
+       Technical Skills — "My Toolkit"
+       ========================================================================== -->
+  <section class="section" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fas fa-toolbox"></i> Competencies</span>
+        <h2 class="section-title">My Toolkit</h2>
+        <p class="section-subtitle">Proficiencies in modern programming languages, frameworks, cloud tooling, and foundational computer science.</p>
+      </div>
+
+      <div class="skills-grid">
+        <!-- 1. Programming Languages -->
+        <div class="skill-category-card">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon"><i class="fas fa-code"></i></div>
+            <h3 class="skill-cat-title">Programming Languages</h3>
+          </div>
+          <div class="skill-items">
+            <span class="skill-pill"><i class="fab fa-python"></i> Python</span>
+            <span class="skill-pill"><i class="fas fa-database"></i> SQL</span>
+            <span class="skill-pill"><i class="fab fa-java"></i> Java (Basics)</span>
+            <span class="skill-pill"><i class="fab fa-js"></i> JavaScript (Basics)</span>
+          </div>
+        </div>
+
+        <!-- 2. Backend Development -->
+        <div class="skill-category-card">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon"><i class="fas fa-server"></i></div>
+            <h3 class="skill-cat-title">Backend Development</h3>
+          </div>
+          <div class="skill-items">
+            <span class="skill-pill"><i class="fas fa-bolt"></i> FastAPI</span>
+            <span class="skill-pill"><i class="fab fa-python"></i> Django</span>
+            <span class="skill-pill"><i class="fas fa-flask"></i> Flask</span>
+            <span class="skill-pill"><i class="fas fa-network-wired"></i> REST APIs</span>
+          </div>
+        </div>
+
+        <!-- 3. Frontend -->
+        <div class="skill-category-card">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon"><i class="fas fa-desktop"></i></div>
+            <h3 class="skill-cat-title">Frontend</h3>
+          </div>
+          <div class="skill-items">
+            <span class="skill-pill"><i class="fab fa-react"></i> React.js</span>
+            <span class="skill-pill"><i class="fab fa-node-js"></i> Node.js</span>
+            <span class="skill-pill"><i class="fab fa-html5"></i> HTML</span>
+            <span class="skill-pill"><i class="fab fa-css3-alt"></i> CSS</span>
+          </div>
+        </div>
+
+        <!-- 4. Artificial Intelligence -->
+        <div class="skill-category-card">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon"><i class="fas fa-brain"></i></div>
+            <h3 class="skill-cat-title">Artificial Intelligence</h3>
+          </div>
+          <div class="skill-items">
+            <span class="skill-pill"><i class="fas fa-microchip"></i> Machine Learning</span>
+            <span class="skill-pill"><i class="fas fa-robot"></i> Generative AI</span>
+          </div>
+        </div>
+
+        <!-- 5. Databases -->
+        <div class="skill-category-card">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon"><i class="fas fa-database"></i></div>
+            <h3 class="skill-cat-title">Databases</h3>
+          </div>
+          <div class="skill-items">
+            <span class="skill-pill"><i class="fas fa-database"></i> PostgreSQL</span>
+            <span class="skill-pill"><i class="fas fa-database"></i> MySQL</span>
+            <span class="skill-pill"><i class="fas fa-leaf"></i> MongoDB</span>
+          </div>
+        </div>
+
+        <!-- 6. Data / Analytics -->
+        <div class="skill-category-card">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon"><i class="fas fa-chart-pie"></i></div>
+            <h3 class="skill-cat-title">Data / Analytics</h3>
+          </div>
+          <div class="skill-items">
+            <span class="skill-pill"><i class="fas fa-chart-bar"></i> Power BI</span>
+            <span class="skill-pill"><i class="fas fa-file-invoice-dollar"></i> TAX</span>
+            <span class="skill-pill"><i class="fas fa-file-excel"></i> Microsoft Excel</span>
+          </div>
+        </div>
+
+        <!-- 7. Developer Tools -->
+        <div class="skill-category-card">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon"><i class="fas fa-tools"></i></div>
+            <h3 class="skill-cat-title">Developer Tools</h3>
+          </div>
+          <div class="skill-items">
+            <span class="skill-pill"><i class="fab fa-github"></i> GitHub</span>
+            <span class="skill-pill"><i class="fab fa-docker"></i> Docker</span>
+            <span class="skill-pill"><i class="fas fa-paper-plane"></i> Postman</span>
+            <span class="skill-pill"><i class="fas fa-terminal"></i> VS Code</span>
+            <span class="skill-pill"><i class="fas fa-cloud"></i> Google AI Studio</span>
+          </div>
+        </div>
+
+        <!-- 8. Core Concepts -->
+        <div class="skill-category-card">
+          <div class="skill-cat-header">
+            <div class="skill-cat-icon"><i class="fas fa-cogs"></i></div>
+            <h3 class="skill-cat-title">Core Concepts</h3>
+          </div>
+          <div class="skill-items">
+            <span class="skill-pill"><i class="fas fa-cubes"></i> OOP</span>
+            <span class="skill-pill"><i class="fas fa-project-diagram"></i> DSA</span>
+            <span class="skill-pill"><i class="fas fa-database"></i> DBMS</span>
+            <span class="skill-pill"><i class="fas fa-microchip"></i> Operating Systems</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Experience / Internships
+       ========================================================================== -->
+  <section class="section" id="experience" style="background: rgba(17, 24, 39, 0.4);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fas fa-briefcase"></i> Experience</span>
+        <h2 class="section-title">Industry Internships</h2>
+        <p class="section-subtitle">Real-world software engineering, application architecture, and AI integrations.</p>
+      </div>
+
+      <div class="experience-timeline">
+        <!-- Internship 1: Mind Matrix -->
+        <div class="exp-card">
+          <div class="exp-node"><div class="exp-node-inner"></div></div>
+          <div class="exp-header">
+            <h3 class="exp-role">Software Development Intern</h3>
+            <div class="exp-company"><i class="fas fa-building"></i> Mind Matrix (VTU MoU Partner)</div>
+          </div>
+          <ul class="exp-list">
+            <li>Contributed to software application development during a 4-month internship using modern development frameworks.</li>
+            <li>Integrated Generative AI capabilities using Google AI Studio to enhance application functionality.</li>
+          </ul>
+          <div class="exp-tech-tags">
+            <span class="tech-badge">Python</span>
+            <span class="tech-badge">Google AI Studio</span>
+            <span class="tech-badge">Generative AI</span>
+            <span class="tech-badge">Software Frameworks</span>
+          </div>
+        </div>
+
+        <!-- Internship 2: CodSoft -->
+        <div class="exp-card">
+          <div class="exp-node"><div class="exp-node-inner"></div></div>
+          <div class="exp-header">
+            <h3 class="exp-role">Software Development / Python Intern</h3>
+            <div class="exp-company"><i class="fas fa-building"></i> CodSoft</div>
+          </div>
+          <ul class="exp-list">
+            <li>Engineered 5 desktop applications in Python utilizing Tkinter graphical user interfaces and SQLite local database persistence.</li>
+            <li>Developed Task 1 (GUI To-Do List with SQLite), Task 2 (Interactive Calculator), Task 3 (Credential-backed Password Generator), Task 4 (Rock Paper Scissors Game), and Task 5 (Contact Management System with full CRUD operations).</li>
+          </ul>
+          <div class="exp-tech-tags">
+            <span class="tech-badge">Python</span>
+            <span class="tech-badge">Tkinter</span>
+            <span class="tech-badge">SQLite</span>
+            <span class="tech-badge">CRUD Architecture</span>
+            <span class="tech-badge">GUI Development</span>
+          </div>
+          <a href="https://github.com/KavyashreeD44/CODSOFT-INTERSHIP" target="_blank" rel="noopener noreferrer" class="exp-btn">
+            <i class="fab fa-github"></i>
+            <span>View Internship Repository</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Featured Projects & Filter
+       ========================================================================== -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fas fa-code-branch"></i> Portfolio</span>
+        <h2 class="section-title">Featured Projects</h2>
+        <p class="section-subtitle">Production-grade software systems across backend infrastructure, AI/ML pipelines, and mobile development.</p>
+      </div>
+
+      <!-- Project Category Filters -->
+      <div class="project-filters">
+        <button type="button" class="filter-btn active" data-filter="all">All</button>
+        <button type="button" class="filter-btn" data-filter="backend">Backend</button>
+        <button type="button" class="filter-btn" data-filter="android">Android</button>
+        <button type="button" class="filter-btn" data-filter="ai-ml">AI/ML</button>
+      </div>
+
+      <!-- Exactly 4 Projects in Exact Order -->
+      <div class="projects-grid">
+        <!-- PROJECT 1: Real-Time Unauthorized Login Detection System -->
+        <article class="project-card" data-category="backend">
+          <div class="project-thumb-wrapper">
+            <img src="assets/projects/unauthorized-login.png" alt="Real-Time Unauthorized Login Detection System Dashboard" class="project-thumb" />
+          </div>
+          <div class="project-body">
+            <div class="project-categories">
+              <span class="project-tag">Backend</span>
+              <span class="project-tag">Security</span>
+              <span class="project-tag">Python</span>
+            </div>
+            <h3 class="project-title">Real-Time Unauthorized Login Detection System</h3>
+            <p class="project-desc">
+              Developed a Python and Flask-based authentication monitoring system to detect and track suspicious login activity in real time. Implemented SQL-based authentication logging to record login events and identify patterns such as repeated failed login attempts and abnormal access behavior. Built monitoring logic to analyze authentication events and flag potentially unauthorized activities for further investigation.
+            </p>
+            <div class="project-tech">
+              <span class="tech-badge">Python</span>
+              <span class="tech-badge">Flask</span>
+              <span class="tech-badge">SQL</span>
+            </div>
+            <div class="project-actions">
+              <a href="https://github.com/KavyashreeD44/real-time-unauthorized-login-detection" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-primary" aria-label="View Unauthorized Login Detection System on GitHub">
+                <i class="fab fa-github"></i>
+                <span>View on GitHub</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROJECT 2: Spend Sense – Smart Expense Manager App -->
+        <article class="project-card" data-category="android">
+          <div class="project-thumb-wrapper">
+            <img src="assets/projects/spend-sense.png" alt="Spend Sense Android Expense Manager App Interface" class="project-thumb" />
+          </div>
+          <div class="project-body">
+            <div class="project-categories">
+              <span class="project-tag">Android</span>
+              <span class="project-tag">Kotlin</span>
+              <span class="project-tag">Mobile Development</span>
+            </div>
+            <h3 class="project-title">Spend Sense – Smart Expense Manager App</h3>
+            <p class="project-desc">
+              Developed an expense management application using Kotlin, Jetpack Compose, MVVM, and Room Database with CRUD operations for income, expense, and budget management. Designed an interactive analytics dashboard with real-time spending insights and category-wise visualizations, while enabling future AI-based expense prediction, cloud synchronization, and secure user authentication.
+            </p>
+            <div class="project-tech">
+              <span class="tech-badge">Kotlin</span>
+              <span class="tech-badge">Jetpack Compose</span>
+              <span class="tech-badge">MVVM</span>
+              <span class="tech-badge">Room Database</span>
+            </div>
+            <!-- Genuine Project: Local source, no fake demo links -->
+          </div>
+        </article>
+
+        <!-- PROJECT 3: AI Self-Healing Test Automation Framework -->
+        <article class="project-card" data-category="ai-ml">
+          <div class="project-thumb-wrapper">
+            <img src="assets/projects/ai-self-healing.png" alt="AI Self-Healing Test Automation Framework Dashboard" class="project-thumb" />
+          </div>
+          <div class="project-body">
+            <div class="project-categories">
+              <span class="project-tag">AI/ML</span>
+              <span class="project-tag">Testing/Automation</span>
+              <span class="project-tag">Python</span>
+            </div>
+            <h3 class="project-title">AI Self-Healing Test Automation Framework</h3>
+            <p class="project-desc">
+              An AI-assisted, production-grade Playwright test automation framework that detects broken element locators caused by DOM and UI refactoring, extracts live candidate elements, and evaluates multi-signal similarity scores using scikit-learn TF-IDF vectorization and token distance algorithms. Verifies confidence against safety thresholds, synthesizes resilient replacement selectors, and retries failed actions seamlessly. Logs telemetry to an interactive web dashboard for visibility into self-healing events.
+            </p>
+            <div class="project-tech">
+              <span class="tech-badge">Python</span>
+              <span class="tech-badge">Playwright</span>
+              <span class="tech-badge">scikit-learn</span>
+              <span class="tech-badge">TF-IDF</span>
+            </div>
+            <div class="project-actions">
+              <a href="https://github.com/KavyashreeD44/ai-self-healing-test-framework" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-primary" aria-label="View AI Self-Healing Test Framework on GitHub">
+                <i class="fab fa-github"></i>
+                <span>View on GitHub</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROJECT 4: Namma Veeragase Bot -->
+        <article class="project-card" data-category="android ai-ml">
+          <div class="project-thumb-wrapper">
+            <img src="assets/projects/namma-veeragase.png" alt="Namma Veeragase Bot Application" class="project-thumb" />
+          </div>
+          <div class="project-body">
+            <div class="project-categories">
+              <span class="project-tag">Android</span>
+              <span class="project-tag">AI/ML</span>
+              <span class="project-tag">Kotlin</span>
+            </div>
+            <h3 class="project-title">Namma Veeragase Bot</h3>
+            <p class="project-desc">
+              A two-screen Kotlin chatbot app built as a tribute to Karnataka Rajyotsava. “Namma Veeragase Bot” teaches users about Veeragase — a heroic folk dance of Karnataka — highlighting its origin, mythology, costumes, and cultural pride. Created as part of my internship at Mind Matrix.
+            </p>
+            <div class="project-tech">
+              <span class="tech-badge">Kotlin</span>
+              <span class="tech-badge">Chatbot</span>
+              <span class="tech-badge">Android</span>
+              <span class="tech-badge">Generative AI</span>
+            </div>
+            <div class="project-actions">
+              <a href="https://github.com/KavyashreeD44/Namma-Veeragase-Bot" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-primary" aria-label="View Namma Veeragase Bot on GitHub">
+                <i class="fab fa-github"></i>
+                <span>View on GitHub</span>
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Certifications (Clickable Certificate Name, Zero Raw URL in UI)
+       ========================================================================== -->
+  <section class="section" id="certifications" style="background: rgba(17, 24, 39, 0.4);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fas fa-certificate"></i> Verified Credentials</span>
+        <h2 class="section-title">Certifications</h2>
+        <p class="section-subtitle">Click on any certificate title below to view the verified credential in a new browser tab.</p>
+      </div>
+
+      <div class="certifications-grid">
+        <!-- CERTIFICATE 1 -->
+        <div class="cert-card">
+          <div>
+            <div class="cert-header">
+              <span class="cert-provider"><i class="fas fa-award"></i> Infosys Springboard</span>
+              <i class="fas fa-file-contract cert-icon"></i>
+            </div>
+            <a href="https://drive.google.com/file/d/1NGDoiIVmtbpx2ZKHRJlDQ-u1YEPj4Kq6/view?usp=drivesdk" target="_blank" rel="noopener noreferrer" class="cert-name-link" aria-label="View Python Fundamental Certificate by Infosys Springboard">
+              <span>Python Fundamental</span>
+              <i class="fas fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+          <div class="cert-footer">
+            <span class="cert-status">Verified Credential</span>
+            <span>Click title to view</span>
+          </div>
+        </div>
+
+        <!-- CERTIFICATE 2 -->
+        <div class="cert-card">
+          <div>
+            <div class="cert-header">
+              <span class="cert-provider"><i class="fas fa-award"></i> Infosys Springboard</span>
+              <i class="fas fa-brain cert-icon"></i>
+            </div>
+            <a href="https://drive.google.com/file/d/1VGB_Y8NiOHV8v8C7UVDFkMH1k60hQBDI/view?usp=drivesdk" target="_blank" rel="noopener noreferrer" class="cert-name-link" aria-label="View Artificial Intelligence and Machine Learning Certificate by Infosys Springboard">
+              <span>Artificial Intelligence and Machine Learning</span>
+              <i class="fas fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+          <div class="cert-footer">
+            <span class="cert-status">Verified Credential</span>
+            <span>Click title to view</span>
+          </div>
+        </div>
+
+        <!-- CERTIFICATE 3 -->
+        <div class="cert-card">
+          <div>
+            <div class="cert-header">
+              <span class="cert-provider"><i class="fas fa-award"></i> Prep Insta</span>
+              <i class="fas fa-robot cert-icon"></i>
+            </div>
+            <a href="https://drive.google.com/file/d/1tFQg_a4Q3Gdqp44UwW6WiOUgD5tF__Ik/view?usp=drivesdk" target="_blank" rel="noopener noreferrer" class="cert-name-link" aria-label="View Machine Learning & Artificial Intelligence Certificate by Prep Insta">
+              <span>Machine Learning & Artificial Intelligence</span>
+              <i class="fas fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+          <div class="cert-footer">
+            <span class="cert-status">Verified Credential</span>
+            <span>Click title to view</span>
+          </div>
+        </div>
+
+        <!-- CERTIFICATE 4 -->
+        <div class="cert-card">
+          <div>
+            <div class="cert-header">
+              <span class="cert-provider"><i class="fas fa-award"></i> Prep Insta</span>
+              <i class="fas fa-chart-line cert-icon"></i>
+            </div>
+            <a href="https://drive.google.com/file/d/1O2QDF8t15suPXTWgHOz3Qx7gF3l-RaTu/view?usp=drivesdk" target="_blank" rel="noopener noreferrer" class="cert-name-link" aria-label="View Data Science Certificate by Prep Insta">
+              <span>Data Science</span>
+              <i class="fas fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+          <div class="cert-footer">
+            <span class="cert-status">Verified Credential</span>
+            <span>Click title to view</span>
+          </div>
+        </div>
+
+        <!-- CERTIFICATE 5 -->
+        <div class="cert-card">
+          <div>
+            <div class="cert-header">
+              <span class="cert-provider"><i class="fas fa-award"></i> IBM</span>
+              <i class="fas fa-microchip cert-icon"></i>
+            </div>
+            <a href="https://drive.google.com/file/d/1U3vYINd7wvHoc78iHX6GitUHCKfwciwE/view?usp=drivesdk" target="_blank" rel="noopener noreferrer" class="cert-name-link" aria-label="View Getting Started with Artificial Intelligence Certificate by IBM">
+              <span>Getting Started with Artificial Intelligence</span>
+              <i class="fas fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+          <div class="cert-footer">
+            <span class="cert-status">Verified Credential</span>
+            <span>Click title to view</span>
+          </div>
+        </div>
+
+        <!-- CERTIFICATE 6 -->
+        <div class="cert-card">
+          <div>
+            <div class="cert-header">
+              <span class="cert-provider"><i class="fas fa-award"></i> Anthropic</span>
+              <i class="fas fa-code-merge cert-icon"></i>
+            </div>
+            <a href="https://verify.skilljar.com/c/kus7t73av4ck" target="_blank" rel="noopener noreferrer" class="cert-name-link" aria-label="View Claude 101 Certificate by Anthropic">
+              <span>Claude 101</span>
+              <i class="fas fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+          <div class="cert-footer">
+            <span class="cert-status">Verified Credential</span>
+            <span>Click title to view</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Contact — "Let's Connect"
+       ========================================================================== -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fas fa-envelope"></i> Contact</span>
+        <h2 class="section-title">Let's Connect</h2>
+        <p class="section-subtitle">Interested in collaborating or discussing software engineering opportunities? Feel free to reach out.</p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Direct Contact Details -->
+        <div class="contact-info-panel">
+          <h3 class="contact-lead">Get In Touch Directly</h3>
+          <p class="contact-desc">
+            I am actively seeking software engineering roles where I can contribute my backend expertise, algorithmic foundation, and passion for AI-driven applications.
+          </p>
+
+          <div class="contact-cards">
+            <!-- Email -->
+            <a href="mailto:kavyashreed44@gmail.com" class="contact-card-item">
+              <div class="contact-icon-box"><i class="fas fa-envelope"></i></div>
+              <div>
+                <div class="contact-meta-label">Email Address</div>
+                <div class="contact-meta-val">kavyashreed44@gmail.com</div>
+              </div>
+            </a>
+
+            <!-- Phone -->
+            <a href="tel:+918618234953" class="contact-card-item">
+              <div class="contact-icon-box"><i class="fas fa-phone"></i></div>
+              <div>
+                <div class="contact-meta-label">Phone Number</div>
+                <div class="contact-meta-val">+91 8618234953</div>
+              </div>
+            </a>
+
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/kavyashree-d-924906420/" target="_blank" rel="noopener noreferrer" class="contact-card-item">
+              <div class="contact-icon-box"><i class="fab fa-linkedin-in"></i></div>
+              <div>
+                <div class="contact-meta-label">LinkedIn Profile</div>
+                <div class="contact-meta-val">linkedin.com/in/kavyashree-d</div>
+              </div>
+            </a>
+
+            <!-- GitHub -->
+            <a href="https://github.com/KavyashreeD44" target="_blank" rel="noopener noreferrer" class="contact-card-item">
+              <div class="contact-icon-box"><i class="fab fa-github"></i></div>
+              <div>
+                <div class="contact-meta-label">GitHub Repositories</div>
+                <div class="contact-meta-val">github.com/KavyashreeD44</div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form-card">
+          <h3 class="contact-form-title">Send a Message</h3>
+          <form id="contact-form" novalidate>
+            <div class="form-group">
+              <label for="name" class="form-label">Your Name</label>
+              <input type="text" id="name" class="form-input" placeholder="e.g. Alex Morgan" required />
+            </div>
+
+            <div class="form-group">
+              <label for="email" class="form-label">Your Email</label>
+              <input type="email" id="email" class="form-input" placeholder="e.g. alex@example.com" required />
+            </div>
+
+            <div class="form-group">
+              <label for="subject" class="form-label">Subject</label>
+              <input type="text" id="subject" class="form-input" placeholder="e.g. Software Engineering Opportunity" required />
+            </div>
+
+            <div class="form-group">
+              <label for="message" class="form-label">Message</label>
+              <textarea id="message" class="form-textarea" placeholder="Write your message here..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary form-submit-btn">
+              <span>Send Message</span>
+              <i class="fas fa-paper-plane"></i>
+            </button>
+
+            <div id="form-status" class="form-status" role="status" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Footer
+       ========================================================================== -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-logo">KAVYASHREE D</div>
+      <div class="footer-role">Software Developer</div>
+
+      <div class="footer-socials">
+        <a href="https://github.com/KavyashreeD44" class="social-icon-btn" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/kavyashree-d-924906420/" class="social-icon-btn" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="mailto:kavyashreed44@gmail.com" class="social-icon-btn" aria-label="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+
+      <p class="footer-copyright">
+        &copy; 2026 Kavyashree D. All rights reserved.
+      </p>
+    </div>
   </footer>
 
-  <script>
-    function showMessage() {
-      alert("Thank you for visiting my portfolio! 😊");
-    }
-  </script>
-
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/filter.js"></script>
+  <script src="js/contact.js"></script>
 </body>
 </html>

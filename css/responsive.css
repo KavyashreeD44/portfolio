@@ -1,0 +1,280 @@
+/* ==========================================================================
+   RESPONSIVE DESIGN & ACCESSIBILITY — KAVYASHREE D
+   Breakpoints: 1200px, 992px, 768px, 480px, 360px
+   ========================================================================== */
+
+/* Large Desktops */
+@media (min-width: 1440px) {
+  :root {
+    --max-width: 1280px;
+  }
+  .hero-title {
+    font-size: 3.75rem;
+  }
+}
+
+/* Tablets & Small Laptops (<= 1024px) */
+@media (max-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 56px;
+  }
+
+  .hero-greeting {
+    justify-content: center;
+  }
+
+  .hero-role {
+    justify-content: center;
+  }
+
+  .hero-summary {
+    margin: 0 auto 32px auto;
+  }
+
+  .hero-cta {
+    justify-content: center;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    text-align: center;
+  }
+
+  .about-highlights {
+    text-align: left;
+  }
+
+  .about-experience-pill {
+    right: 0;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Mobile & Tablets (<= 768px) */
+@media (max-width: 768px) {
+  :root {
+    --header-height: 64px;
+  }
+
+  .section {
+    padding: 72px 0;
+  }
+
+  .section-header {
+    margin-bottom: 40px;
+  }
+
+  .section-title {
+    font-size: 1.85rem;
+  }
+
+  /* Mobile Navigation Menu */
+  .mobile-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    width: 100%;
+    height: calc(100vh - var(--header-height));
+    background: rgba(11, 17, 32, 0.98);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 40px 24px;
+    gap: 20px;
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform var(--transition-smooth), opacity var(--transition-normal);
+    overflow-y: auto;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  .nav-links.active {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .nav-link {
+    font-size: 1.15rem;
+    padding: 10px 0;
+  }
+
+  /* Hero Section */
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-role {
+    font-size: 1.25rem;
+  }
+
+  .hero-profile-card {
+    width: 290px;
+    height: 360px;
+  }
+
+  .floating-badge {
+    padding: 8px 12px;
+    font-size: 0.78rem;
+  }
+
+  .badge-backend {
+    top: 15px;
+    left: -10px;
+  }
+
+  .badge-ai {
+    bottom: 20px;
+    right: -10px;
+  }
+
+  /* About Highlights */
+  .about-highlights {
+    grid-template-columns: 1fr;
+  }
+
+  /* Timelines (Education & Experience) */
+  .education-timeline,
+  .experience-timeline {
+    padding-left: 28px;
+  }
+
+  .education-timeline::before,
+  .experience-timeline::before {
+    left: 8px;
+  }
+
+  .timeline-node,
+  .exp-node {
+    left: -28px;
+    width: 20px;
+    height: 20px;
+  }
+
+  .timeline-node-inner,
+  .exp-node-inner {
+    width: 6px;
+    height: 6px;
+  }
+
+  .timeline-card,
+  .exp-card {
+    padding: 20px 18px;
+  }
+
+  .timeline-institute,
+  .exp-role {
+    font-size: 1.1rem;
+  }
+
+  /* Skills Grid */
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Certifications */
+  .certifications-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Contact Form */
+  .contact-form-card {
+    padding: 24px 20px;
+  }
+}
+
+/* Small Mobile Phones (<= 480px) */
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2.15rem;
+  }
+
+  .hero-cta {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-cta .btn {
+    width: 100%;
+  }
+
+  .hero-profile-card {
+    width: 260px;
+    height: 330px;
+  }
+
+  .about-img-box {
+    max-width: 280px;
+  }
+
+  .project-body {
+    padding: 20px 18px;
+  }
+
+  .project-actions {
+    flex-direction: column;
+  }
+
+  .project-actions .project-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Extra Small Devices (360px - 390px) */
+@media (max-width: 390px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  .hero-title {
+    font-size: 1.95rem;
+  }
+
+  .hero-profile-card {
+    width: 240px;
+    height: 300px;
+  }
+
+  .timeline-card,
+  .exp-card {
+    padding: 16px 14px;
+  }
+}
+
+/* Reduced Motion Preference for Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .floating-badge {
+    animation: none;
+  }
+}
